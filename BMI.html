@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+<h1> Body Mass Index (BMI) Calculator Developed by Ishaku Yusuf Maina </h1>
+<script src="BMI.js"></script>
+<div>
+<h2> Body Mass Index (BMI) Calculator </h2>
+<label for="wieght"><b>Weight (kg)</b></label> </br>
+ <input type="number" placeholder="Enter your weight in kg" name="weight" id="weight" required></br>
+ <label for="height"><b>Height (m)</b></label> </br>
+ <input type="number" placeholder="Enter your height in meter" name="height" id="height" required>
+ </br>
+ <button type="button" onclick="writeR()" class="cancelbtn">Compute</button>
+ <p id="result"></p>
+ </div>
+ 
+ <script>
+ var i = 0;
+var cat =  categorizeFromControls();
+var bmi = computeFromControls();
+var j = 0;
+var speed = 50;
+var result = cat + bmi;
+ function writeR(){
+ cat =  categorizeFromControls();
+ bmi = computeFromControls();
+  result = cat + bmi;
+ i = 0;
+ j =0;
+ if (cat == null) alert("Fields must not be empty"); else
+ {
+		cat = "Category: " + cat;
+		bmi = "BMI: "  + bmi;
+		result = cat + bmi;
+		document.getElementById("result").innerHTML	= "";
+		typeWriter();
+}		
+ }
+ 
+
+
+function typeWriter() {
+  if (i < result.length) {
+  if (i == cat.length ){
+		document.getElementById("result").appendChild(document.createElement("br"));}
+    document.getElementById("result").innerHTML += result.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+  
+  
+}
+</script>
+
+ 
+</body>
+</html>
