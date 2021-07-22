@@ -17,7 +17,6 @@ div {
   outline: 4px solid red;
   outline-offset: 15px;
   width: 90%;
-  height: 90%;
   padding: 60px 0px;
   -ms-transform: translate(0%, 10%);
   transform: translate(0%, 10%);
