@@ -2,8 +2,8 @@ h1 {
  font-family: "Sofia", sans-serif;
   font-size: 30px;
   text-shadow: 3px 3px 3px #ababab;
-  position: relative;
-  left: 15%;
+ 
+  
 } 
 
 body {
@@ -16,7 +16,7 @@ div {
   border: 1px solid black;
   outline: 4px solid red;
   outline-offset: 15px;
-  width: 70%;
+  width: 80%;
   padding: 60px 0px;
   -ms-transform: translate(0%, 10%);
   transform: translate(0%, 10%);
