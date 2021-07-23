@@ -2,8 +2,8 @@ h1 {
  font-family: "Sofia", sans-serif;
   font-size: 30px;
   text-shadow: 3px 3px 3px #ababab;
- 
-  
+  position: relative;
+  left: 15%;
 } 
 
 body {
@@ -12,17 +12,19 @@ body {
 }
 
 div {
+  position: absolute;
   margin: auto;
   border: 1px solid black;
   outline: 4px solid red;
   outline-offset: 15px;
   width: 90%;
-  padding: 60px 0px;
-  -ms-transform: translate(0%, 10%);
-  transform: translate(0%, 10%);
+  padding: 0px 0px;
+  -ms-transform: translate(5%, 10%);
+  transform: translate(5%, 10%);
 } 
 
 input {
+  border: 2px solid red;
   width: 70%;
   padding: 12px 12px;
   margin: auto;
@@ -32,6 +34,10 @@ input {
 
 input:focus {
   background-color: lightblue;
+}
+
+section {
+	position: buttom;
 }
 
 
