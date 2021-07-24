@@ -1,5 +1,5 @@
 h1 {
- font-family: "Sofia", sans-serif;
+ //font-family: "Sofia", sans-serif;
   font-size: 30px;
   text-shadow: 3px 3px 3px #ababab;
   position: relative;
@@ -7,20 +7,20 @@ h1 {
 } 
 
 body {
-	font-family: "Sofia", sans-serif;
-  text-shadow: 3px 3px 3px #ababab;
+	//font-family: "Sofia", sans-serif;
+  //text-shadow: 3px 3px 3px #ababab;
 }
 
-div {
-  position: absolute;
+#bmi {
+  //position: absolute;
   margin: auto;
   border: 1px solid black;
   outline: 4px solid red;
   outline-offset: 15px;
   width: 90%;
   padding: 0px 0px;
-  -ms-transform: translate(5%, 10%);
-  transform: translate(5%, 10%);
+  //-ms-transform: translate(5%, 10%);
+//  transform: translate(5%, 10%);
 } 
 
 input {
@@ -38,6 +38,7 @@ input:focus {
 
 section {
 	position: buttom;
+	font-family: "Sofia", sans-serif;
 }
 
 
@@ -69,3 +70,25 @@ p {
   background-color: lightgrey;
   font-size: 20px;
 }
+
+
+
+#digitalClock {
+			 font-family: "Space Mono", monospace;
+			 font-weight: bold;
+			 color:red;
+			 font-size: 20px;
+			 background-color: rgba(0,0,0,1.0);
+			 width: 15%;
+			 border: 1px solid green;
+			 padding: 10px;
+			 outline-style: outset;
+			 outline-color: blue;
+			 text-align: justify;
+			 position: fixed;
+			 top: 3%;
+			 right: 1%;
+			 opacity: 1.0;
+			// -ms-transform: translate(80%, 0);
+			//  transform: translate(80%, 0);
+			 }
