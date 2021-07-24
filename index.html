@@ -8,9 +8,23 @@
 <body>
 <h1> Body Mass Index (BMI) Calculator developed by Ishaku Yusuf Maina </h1>
 <script src="BMI.js"></script>
-<div>
-<h2> Body Mass Index (BMI) Calculator </h2>
-<label for="wieght"><b>Weight (kg)</b></label> </br>
+<div id="digitalClock">
+	<span id="time"></span></br>
+	<span id="date"></span>
+</div>
+<script>
+	setInterval(myTimer,1000);
+	
+	function myTimer(){
+	const d = new Date();
+	document.getElementById("time").innerHTML = d.toLocaleTimeString();
+	document.getElementById("date").innerHTML = d.toDateString();
+	}
+</script>
+
+<div id="bmi">
+ <h2> Body Mass Index (BMI) Calculator </h2>
+ <label for="wieght"><b>Weight (kg)</b></label> </br>
  <input type="number" placeholder="Enter your weight in kg" name="weight" id="weight" required></br>
  <label for="height"><b>Height (m)</b></label> </br>
  <input type="number" placeholder="Enter your height in meter" name="height" id="height" required>
@@ -25,7 +39,7 @@
  
  
  <script>
- var i = 0;
+var i = 0;
 var cat =  categorizeFromControls();
 var bmi = computeFromControls();
 var j = 0;
@@ -37,7 +51,7 @@ var result = cat + bmi;
   result = cat + bmi;
  i = 0;
  j =0;
- if (cat == null) alert("Fields must not be empty"); else
+ if (document.getElementById("height").value == "" || document.getElementById("weight").value == "") alert("Fields must not be empty"); else
  {
 		cat = "Category: " + cat;
 		bmi = "BMI: "  + bmi;
@@ -62,6 +76,8 @@ function typeWriter() {
 }
 </script>
 
+ 
+ 
  
 </body>
 </html>
