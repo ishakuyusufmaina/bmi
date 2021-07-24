@@ -73,22 +73,15 @@ p {
 
 
 
-#digitalClock {
+span {
 			 font-family: "Space Mono", monospace;
 			 font-weight: bold;
 			 color:red;
 			 font-size: 20px;
-			 background-color: rgba(0,0,0,1.0);
-			 width: 15%;
 			 border: 1px solid green;
-			 padding: 10px;
 			 outline-style: outset;
 			 outline-color: blue;
-			 text-align: justify;
-			 position: fixed;
-			 top: 3%;
-			 right: 1%;
-			 opacity: 1.0;
+			 
 			// -ms-transform: translate(80%, 0);
 			//  transform: translate(80%, 0);
 			 }
