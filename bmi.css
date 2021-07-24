@@ -2,8 +2,8 @@ h1 {
  //font-family: "Sofia", sans-serif;
   font-size: 30px;
   text-shadow: 3px 3px 3px #ababab;
-  position: relative;
-  left: 15%;
+//  position: relative;
+  //left: 15%;
 } 
 
 body {
@@ -81,6 +81,8 @@ span {
 			 border: 1px solid green;
 			 outline-style: outset;
 			 outline-color: blue;
+			 background-color: black;
+			 text-shadow: 0px 0px 0px #ababab;
 			 
 			// -ms-transform: translate(80%, 0);
 			//  transform: translate(80%, 0);
