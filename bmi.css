@@ -1,6 +1,16 @@
 @keyframes headinganimation {
-	from {right: 100%;}
-	to {left: -60%;}
+from {-ms-transform: translate(100%, 0%);
+	  transform: translate(100%, 0%);}
+to {-ms-transform: translate(-100%, 0%);
+	  transform: translate(-100%, 0%);}
+	
+}
+
+@keyframes clockanimation {
+
+from {color: black;}
+	  
+to {color: red;}
 	
 }
 	
@@ -11,7 +21,7 @@ h1 {
   font-size: 30px;
   text-shadow: 3px 3px 3px #ababab;
   position: relative;
-  left: 100%;
+  //left: 100%;
   animation-name: headinganimation;
   animation-duration: 30s;
   animation-iteration-count: infinite;
@@ -21,6 +31,7 @@ h1 {
 body {
 	//font-family: "Sofia", sans-serif;
   //text-shadow: 3px 3px 3px #ababab;
+  position: fixed;
 }
 
 #bmi {
@@ -88,8 +99,9 @@ p {
 span {
 
   position: relative;
-  left: 10%;
-
+  left: 5%;
+  
+			
 			 font-family: "Space Mono", monospace;
 			 font-weight: bold;
 			 color:red;
@@ -97,10 +109,8 @@ span {
 			 border: 1px solid green;
 			 outline-style: outset;
 			 outline-color: blue;
-			 background-color: black;
-			 text-shadow: 0px 0px 0px #ababab;
-			 
-			 
-			// -ms-transform: translate(80%, 0);
-			//  transform: translate(80%, 0);
+			
+			 animation-name: clockanimation;
+             animation-duration: 5s;
+			  background-color: black;
 			 }
