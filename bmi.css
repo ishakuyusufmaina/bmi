@@ -24,7 +24,6 @@ h1 {
   text-shadow: 3px 3px 3px #ababab;
   position: relative;
   //left: 100%;
- display: inline;
   animation-name: headinganimation;
   animation-duration: 30s;
   animation-iteration-count: infinite;
