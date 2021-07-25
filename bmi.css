@@ -18,7 +18,9 @@ to {color: red;}
 
 h1 {
  //font-family: "Sofia", sans-serif;
-  //font-size: 30px;
+  font-size: 30px;
+	max-width: 500px;
+  margin: auto;
   text-shadow: 3px 3px 3px #ababab;
   position: relative;
   //left: 100%;
