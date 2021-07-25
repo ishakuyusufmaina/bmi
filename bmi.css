@@ -20,7 +20,7 @@ h1 {
  //font-family: "Sofia", sans-serif;
   font-size: 30px;
   text-shadow: 3px 3px 3px #ababab;
-  position: relative;
+  position: fixed;
   //left: 100%;
   animation-name: headinganimation;
   animation-duration: 30s;
