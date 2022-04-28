@@ -38,12 +38,12 @@ body {
 
 #bmi {
   //position: absolute;
-  margin: auto;
+  margin: 5px;
   border: 1px solid black;
   outline: 4px solid red;
   outline-offset: 15px;
   width: 90%;
-  padding: 0px 0px;
+  padding: 5px
   //-ms-transform: translate(5%, 10%);
 //  transform: translate(5%, 10%);
 } 
@@ -61,7 +61,7 @@ input:focus {
   background-color: lightblue;
 }
 
-section {
+address {
 	position: buttom;
 	font-family: "Sofia", sans-serif;
 }
