@@ -73,6 +73,8 @@ footer {
 margin: 10px;
 padding: 10px;
 text-align: justify;
+color: white;
+background-color: rgb(2, 3, 3);
 }
 
 
@@ -117,7 +119,7 @@ span {
 			
 			 font-family: "Space Mono", monospace;
 			 font-weight: bold;
-			 color:red;
+			 color:white;
 			 font-size: 20px;
 			 border: 1px solid green;
 			 outline-style: outset;
@@ -125,5 +127,5 @@ span {
 			text-align: center;
 			 animation-name: clockanimation;
              animation-duration: 5s;
-			  background-color: black;
+			  background-color: rgba(0, 0, .5);
 			 }
