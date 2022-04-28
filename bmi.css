@@ -39,6 +39,7 @@ body {
 #bmi {
   //position: absolute;
 border-radius: 30%;
+text-align: center;
   border: 1px solid black;
   outline: 4px solid teal;
 margin-bottom: 15px;
