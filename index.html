@@ -22,7 +22,7 @@
 	}
 </script>
 </br>
-<fieldset> id="bmi" class="container-fluid">
+<fieldset id="bmi" class="container-fluid">
 <legend>Body Mass Index (BMI) Calculator </legend>
  <label for="wieght"><b>Weight (kg)</b></label> </br>
  <input type="number" placeholder="Enter your weight in kg" name="weight" id="weight" required></br>
@@ -41,13 +41,13 @@
  <script>
 var i = 0;
 var cat =  categorizeFromControls();
-var bmi = Math.fround(computeFromControls());
+var bmi = computeFromControls();
 var j = 0;
 var speed = 50;
 var result = cat + bmi;
  function writeR(){
  cat =  categorizeFromControls();
- bmi = computeFromControls();
+ bmi = computeFromControls().toFixed(2);
   result = cat + bmi;
  i = 0;
  j =0;
