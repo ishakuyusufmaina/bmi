@@ -22,8 +22,8 @@
 	}
 </script>
 </br>
-<div id="bmi" class="container-fluid">
- <h2> Body Mass Index (BMI) Calculator </h2>
+<fieldset> id="bmi" class="container-fluid">
+<legend>Body Mass Index (BMI) Calculator </legend>
  <label for="wieght"><b>Weight (kg)</b></label> </br>
  <input type="number" placeholder="Enter your weight in kg" name="weight" id="weight" required></br>
  <label for="height"><b>Height (m)</b></label> </br>
@@ -34,14 +34,14 @@
  <section id = "conctact">For any enquiry contact Ishaku Yusuf Maina at:</br>
  <a href = "https://api.whatsapp.com/send?phone=+2349045060362">Whatsapp </a></br>
  <a href = "https://yusufmainaishaku@gmail.com">Email </a></</section>
- </div>
+ </fieldset>
  
  
  
  <script>
 var i = 0;
 var cat =  categorizeFromControls();
-var bmi = computeFromControls();
+var bmi = Math.fround(computeFromControls());
 var j = 0;
 var speed = 50;
 var result = cat + bmi;
