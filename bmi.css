@@ -70,8 +70,7 @@ address {
 	font-family: "Sofia", sans-serif;
 }
 footer {
-margin: 10px;
-padding: 10px;
+margin-top: 15px;
 text-align: justify;
 color: white;
 background-color: rgb(2, 3, 3);
@@ -121,11 +120,9 @@ span {
 			 font-weight: bold;
 			 color:white;
 			 font-size: 20px;
-			 border: 1px solid green;
 			 outline-style: outset;
-			 outline-color: blue;
 			text-align: center;
 			 animation-name: clockanimation;
              animation-duration: 5s;
-			  background-color: rgba(0, 0, .5);
+			  background-color: rgba(0, 0, 0, .5);
 			 }
