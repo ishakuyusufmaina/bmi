@@ -44,7 +44,7 @@ border-radius: 30%;
 margin-bottom: 15px;
   outline-offset: 10px;
   width: 90%;
-  padding-left: 10px;
+  padding-right: 10px;
   //-ms-transform: translate(5%, 10%);
 //  transform: translate(5%, 10%);
 }
