@@ -14,7 +14,9 @@ to {color: red;}
 	
 }
 	
-
+#sign-in {
+opacity: 0.5;
+}
 
 //h1 {
  //font-family: "Sofia", sans-serif;
