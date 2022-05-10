@@ -37,6 +37,7 @@ alert("clicked");
   signInWithRedirect(auth, provider);
 }
 function logOut(){
+alert("click");
   signOut(auth).then(()=>{
     //successfully loggedout
   }).catch((error)=>{
