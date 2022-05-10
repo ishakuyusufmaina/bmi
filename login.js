@@ -64,8 +64,8 @@ onAuthStateChanged(auth, (user)=>{
 
 
 function setSignedInState(user){
-  signInBtn.display = "none";
-  signOutBtn.display = "static";
+  signInBtn.style.display = "none";
+  signOutBtn.style.display = "static";
   userInfo.innerHTML = user.ui;
 }
 
