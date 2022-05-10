@@ -33,6 +33,7 @@ signInBtn.addEventListener("click", logIn);
 signOutBtn.addEventListener("click", logOut);
 
 function logIn(){
+alert("clicked");
   signInWithRedirect(auth, provider);
 }
 function logOut(){
