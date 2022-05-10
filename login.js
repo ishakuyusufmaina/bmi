@@ -47,8 +47,10 @@ function logOut(){
 
 getRedirectResult(auth).then((result)=>{
   //successfully redirected with result
+alert("success");
 }).catch((error)=>{
   //an error occured
+alert("error")
 });
 
 
