@@ -9,7 +9,7 @@ import {getAuth, signInWithRedirect, getRedirectResult, signOut, onAuthStateChan
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
     apiKey: "AIzaSyBuEn5LT4GsW2cLsSvRua2zoVal06P3EzM",
-    authDomain: "yusufmaina.netlify.app"
+    authDomain: "yusufmaina.netlify.app",
     projectId: "bmi-monitor-1",
     storageBucket: "bmi-monitor-1.appspot.com",
     messagingSenderId: "893411528878",
