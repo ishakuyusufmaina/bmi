@@ -40,8 +40,10 @@ function logOut(){
 alert("click");
   signOut(auth).then(()=>{
     //successfully loggedout
+alert("signed out")
   }).catch((error)=>{
     //an error occurred
+alert("error in signing out")
   });
 }
 
