@@ -74,8 +74,8 @@ function setSignedInState(user){
 
 
 function setSignedOutState(){
-  signInBtn.display = "static";
-  signOutBtn.display = "none";
+  signInBtn.style.display = "static";
+  signOutBtn.style.display = "none";
   userInfo.innerHTML = "null";
 }
 
