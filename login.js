@@ -15,7 +15,7 @@ import {getAuth, signInWithRedirect, getRedirectResult, signOut, onAuthStateChan
     messagingSenderId: "893411528878",
     appId: "1:893411528878:web:71b7d33f78ed2003ec9d3f",
     measurementId: "G-68Z7RWN8P2"
-  };
+  }; 
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
