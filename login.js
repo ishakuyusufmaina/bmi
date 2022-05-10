@@ -61,7 +61,7 @@ onAuthStateChanged(auth, (user)=>{
   if (user){
      setSignedInState(user);
   } else {
-    setSignOutState()
+    setSignedOutState()
   }
 });
 
