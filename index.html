@@ -2,104 +2,256 @@
 <html lan="eng">
 <head>
   <meta charset="utf-8">
-<title>Body Mass Calculator</title>
+<title>Body Mass Index Calculator</title>
 <meta property="og:image" content="bmicalculator.jpg">
 <meta name="author" content="Ishaku Yusuf Maina" >
 <meta name="description" content="Body Mass index calculator (BMI), developed by Ishaku Yusuf Maina." >
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-  <link rel="stylesheet" href="bmi.css">
-<script type="module" src="/login.js" defer>
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7394451431516748"
-     crossorigin="anonymous"></script>
 </head>
-<body class="container">
-<header class="container fade">
-<p id="userinfo"></p>
-<button id="signinbtn" class="btn btn-primary">Login</button>
-<button id="signoutbtn">Logout</button>
-</header>
-<div id="time"></div> <div id="date"></div>
-<script src="BMI.js"></script>
-<script>
-	setInterval(myTimer,1000);
+<div id="bmi-calculator">
+	<header>
+		<h2>BMI Calculator</h2>
+		<div class="icon green"></div>
+		<div class="icon white"></div>
+		<div class="icon green"></div>
+		<div class="help" id="helpBtn">?</div>
+	</header>
+	<div id="output">
+		<div class="bmi"></div>
+		<div class="class"></div>
+	</div>
+	<div class="controls">
+	<div>
+		<div class ="label"><label for="mass">MASS</label></div>
+		<div><input id= "mass" type="number" placeholder="kilogram (kg)"></div>
+	</div>
+	<div>
+		<div class ="label"><label for="height">HEIGHT</label></div>
+		<div><input id ="height" type="number" placeholder="meter(m)"></div>
+	</div>
+	</div>
+	<div id="calcBtn">
+		Calculate
+	</div>
 	
-	function myTimer(){
-	const d = new Date();
-	document.getElementById("time").innerHTML = d.toLocaleTimeString();
-	document.getElementById("date").innerHTML = d.toDateString();
+	<dialog id="dialog">
+		<button id="closeDialog">X</button>
+		<h2>BMI Calculator</h2>
+		<p>
+			BMI calculator calculates your body mass index (BMI)
+			Given your mass/weight in kilogram (kg)
+			and your height in meter (m)
+		</p>
+		<hr>
+		<p>
+		On clicking the "calculate" button
+		The app is expected to calculate your BMI in number,
+		and classify the result accordingly.
+		The classification is either underweight, normal,
+		overweight, obesity class I, obesity class II,
+		or obesity class III .
+		And finally, it displays the result of the computation
+		indicating both the numeric bmi and the class it belongs to.
+		</p>
+		<h3>What is BMI?</h3>
+		<p>
+		BMI is a risk factor for many cardivascular, metabolic and other diseases.
+		High BMI is associated with diabestes type II, hypertension, osteoarthritis,
+		arteriosclerosis, and so on.
+		</P>
+		<p>- Dr Maina(PT)</p>
+
+	</dialog>
+</div>
+
+<script>
+	helpBtn.onclick = ()=>{
+		dialog.showModal();
 	}
+	closeDialog.onclick = ()=>{
+		dialog.close();
+	}
+	
+	function calculate(mass, height){
+		let bmi = (Number(mass)/(Number(height)**2)).toFixed(1);
+		let result = {
+			bmi: bmi
+		}
+		let cat = null;
+		if (bmi <18.5){//underweight
+			cat = "underweight";
+		} else
+		if (bmi <=24.9){//normal
+			cat="normal";
+		} else
+		if (bmi <=29.9){//overweight
+			cat = "overweight";
+		} else
+		if (bmi <=34.9){//class I Obesity
+			cat = "class I Obesity"
+		} else
+		if (bmi <=39.9){//Class II Obesity
+			cat = "class II Obesity"
+		} else {//Class III Obesity
+			cat = "class III Obesity"
+		}
+		
+		result.class = cat;
+		return result;
+		
+	}
+	
+	calcBtn.onclick = ()=>{
+		let massVal = mass.value;
+		if (!massVal){return}
+		let heightVal = height.value;
+		if (!heightVal){return}
+		let bmi = calculate(massVal, heightVal);
+		let bmiOut = output.querySelector(".bmi");
+		bmiOut.innerHTML = bmi.bmi + " kg/m<sup>2</su>";
+		let classOut = output.querySelector(".class");
+		classOut.innerHTML = bmi.class;
+		
+	}
+	
+	document.querySelectorAll("input").forEach(input=>{
+		input.onchange = ()=>{
+			document.querySelectorAll(".bmi, .class").forEach(child=>{child.innerHTML = ""});
+		}
+	})
+	
 </script>
-</br>
-<fieldset id="bmi" class="container-fluid">
-<legend>Body Mass Index (BMI) Calculator </legend>
- <div class="input">
-<label for="wieght"><b>Weight (kg)</b></label> </br>
- <input type="number" class="form-control" placeholder="Enter your weight in kg" name="weight" id="weight" required></br>
- <label for="height"><b>Height (m)</b></label> </br>
- <input type="number" placeholder="Enter your height in meter" name="height" class="form-control" id="height" required>
- </div>
- <button type="button" onclick="writeR()" class="btn btn-info">Compute</button>
- <p id="result" class="bg-primary"></p>
-  </fieldset>
-<footer class="container-fluid">
-&#169;Copyright 2020 - 2022 Ishaku Yusuf Maina.
 
-
-All Rights Reserved.
-
-<address id = "conctact">For any enquiry contact Ishaku Yusuf Maina at:</br>
- <a href = "https://api.whatsapp.com/send?phone=+2349045060362">Whatsapp </a></br>
- <a href = "mailto:yusufmainaishaku@gmail.com">Email </a></</address>
-</footer>
-
- 
- 
- 
- <script>
-var i = 0;
-var cat =  categorizeFromControls();
-var bmi = computeFromControls();
-var j = 0;
-var speed = 50;
-var result = cat + bmi;
- function writeR(){
- cat =  categorizeFromControls();
- bmi = computeFromControls().toFixed(2);
-  result = cat + bmi;
- i = 0;
- j =0;
- if (document.getElementById("height").value == "" || document.getElementById("weight").value == "") alert("Fields must not be empty"); else
- {
-		cat = "Category: " + cat;
-		bmi = "BMI: "  + bmi;
-		result = cat + bmi;
-		document.getElementById("result").innerHTML	= "";
-		typeWriter();
-}		
- }
- 
-
-
-function typeWriter() {
-  if (i < result.length) {
-  if (i == cat.length ){
-		document.getElementById("result").appendChild(document.createElement("br"));}
-    document.getElementById("result").innerHTML += result.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+<style>
+	:root {
+		background: black;
+		color: white;
+		font-family: verdana;
+		padding: 14px;
+	}
+	#output > * {
+		margin: 10px;
+	}
+	#output > .class {
+		text-align: right;
+	}
+	
+	@media only screen and (min-width: 768px){
+  dialog  {
+	 width: 300px;
+	height: 450px;
   }
   
-  
+  #bmi-calculator  {
+	 width: 300px;
+	height: 450px;
+  }
 }
-</script>
+	
+	dialog {
+		margin: auto;
+		text-align: justify;
+		color: white;
+		background: #091319;
+		line-height: 2;
+		
+	}
+	::backdrop {
+		background-image: linear-gradient(
+			45deg, #001132, #00131E, #06021C, #04051E);
+		opacity: 0.75;
+	}
+	#bmi-calculator {
+		position: relative;
+		
+		margin: auto;
+		border: 2px solid white;
+		box-sizing: border-box;
+		border-top-right-radius: 8px;
+		border-top-left-radius: 8px;
+		background: #052E47;
+	}
+	header > *{
+		display: inline-block;
+	}
+	header > .icon {
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+	}
+	header > div.green{
+		background: green;
+	}
+	header > div.white{
+		background: white;
+	}
+	header > div.green{
+		background: green;
+	}
+	.label {
+		margin-top: 8px;
+	}
+	.help {
+		position:absolute;
+		right: -13;
+		top: -13;
+		width: 26px;
+		height: 26px;
+		border: 2px solid red;
+		font-size: 24px;
+		text-align: center;
+		background: #FF3701;
+		border-radius: 50%;
+		user-select: none;
+	}
+	#calcBtn {
+		text-align: center;
+		font-size: 30px;
+		border-radius: 12px;
+		margin: 30px;
+		padding: 8px;
+		border: 2px solid white;
+		user-select: none;
+	
+	}
+	input {
+		width: 100%;
+		height: 35px;
+		padding: 4px;
+		font-size: 22px;
+	  background: white;
+	}
+	div.controls {
+	text-align: center;
+	padding: 4px;
+	border-bottom: 2px solid white;
+	font-size: 24px;
+	height: 150px;
+	
+	}
+	#output {
+		width: 100%;
+		height: 100px;
+		margin: auto;
+		border-top: 2px solid white;
+		border-bottom: 2px solid white;
+	}
+	
+	
+	#calcBtn:hover {
+	 box-shadow: 2px 2px 2px 2px lightblue;
+	}
+	 #calcBtn:active {
+	 box-shadow: 2px 2px 2px 2px lightblue;
+	 background: lightblue;
+	}
+	.help:hover {
+		box-shadow: 2px 2px 2px 2px yellow;
+	}
+	.help:active {
+		background: gold;
+	}
+</style>
 
- 
- 
- </br>
 </body>
 </html>
